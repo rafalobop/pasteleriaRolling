@@ -1,10 +1,5 @@
-// let signinButton = document.querySelector('#sign-in-button');
-// let signupButton = document.querySelector('#sign-up-button');
-// let container = document.querySelector('.container');
+let user = document.querySelector('.user-input');
 
-// signupButton.addEventListener('click', () => {
-//   container.classList.add('sign-up-mode');
-// });
-// signinButton.addEventListener('click', () => {
-//   container.classList.remove('sign-up-mode');
-// });
+function cambiaColor() {
+  user.classList.add('border-color');
+}
