@@ -99,7 +99,9 @@ body {
   perspective: 1000px;
   padding: 2%;
 }
-
+.carousel-item.active img {
+  border: 2px solid #c17397;
+}
 .flip-card-inner {
   position: relative;
   width: 100%;
