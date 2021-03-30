@@ -46,11 +46,11 @@ body {
   font-size: 20px;
   letter-spacing: 2px;
 }
-.fields {
+.form {
   width: 100%;
   padding-top: 2%;
 }
-.fields input {
+.form input {
   border: none;
   outline: none;
   background: none;
@@ -64,7 +64,7 @@ body {
   border-radius: 25px;
   box-shadow: inset 8px 8px 8px #d094b0, inset -8px -8px 8px #fff;
 }
-.fields i {
+.form i {
   margin-left: 20px;
 }
 .signin-button {
