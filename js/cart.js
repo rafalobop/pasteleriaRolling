@@ -125,3 +125,11 @@ function agregarCarrito(codigo) {
     alert('No hay stock disponible');
   }
 }
+
+function contarCarrito() {
+  let sumaCantidad = 0;
+  for (let i = 0; i < carrito.length; i++) {
+    sumaCantidad += carrito[i].cantidad;
+  }
+  contadorCarrito.innerHTML = sumaCantidad;
+}
