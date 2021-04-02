@@ -85,6 +85,12 @@ body {
 /*carrito*/
 
 .imagenCarrito {
+  /*width: 150px;
+  object-fit: contain;*/
   width: 150px;
-  object-fit: contain;
+  height: 155px;
+  border-top-left-radius: 40px;
+  /*border-top-right-radius: 40px;*/
+}
+
 }

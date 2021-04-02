@@ -63,9 +63,10 @@ let prod6 = new Producto(
   'https://cdn.cienradios.com/wp-content/uploads/sites/3/2020/03/crumble-de-manzana.jpg',
   10
 );
-*/
-//productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
 
+*/
+
+//productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
 
 console.log(productos);
 
@@ -171,7 +172,7 @@ function cargarModal() {
       <div class="card-body">
         <h5 class="card-title">${prod.cantidad} ${prod.nombre}</h5>
         <p class="card-text">Precio: $${prod.precio}</p>
-        <a href="#" class="btn btn-danger"onclick="delElementCarrito(${prod.id})">Eliminar</a>
+        <a href="#" class="btn btn-secondary"onclick="delElementCarrito(${prod.id})">Eliminar</a>
       </div>
     </div>
   </div>
