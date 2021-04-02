@@ -81,3 +81,10 @@ body {
   text-decoration: none;
   color: #faa8a5;
 }
+
+/*carrito*/
+
+.imagenCarrito {
+  width: 150px;
+  object-fit: contain;
+}
