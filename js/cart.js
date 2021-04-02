@@ -33,14 +33,14 @@ let prod2 = new Producto(
   'Coco con dulce de leche',
   60,
   'https://cdn.cienradios.com/wp-content/uploads/sites/13/2015/05/barritas-de-coco-y-dulce-de-lecheWEB.jpg',
-  9
+  10
 );
 let prod3 = new Producto(
   3,
   'Pastafrola',
   50,
   'https://recetaland.com/wp-content/uploads/2020/03/9.-pasta-frola-vegana-DF.jpg',
-  9
+  10
 );
 let prod4 = new Producto(
   4,
@@ -65,11 +65,23 @@ let prod6 = new Producto(
 );
 */
 //productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
+
+
 console.log(productos);
 
-// localStorage.setItem('productos', JSON.stringify(productos));
+//localStorage.setItem('productos', JSON.stringify(productos));
 
 window.addEventListener('load', cargarCards);
+
+//contar carrito
+function contarCarrito() {
+  let sumaCantidad = 0;
+  for (let i = 0; i < carrito.length; i++) {
+    sumaCantidad += carrito[i].cantidad;
+  }
+  contadorCarrito.innerHTML = sumaCantidad;
+}
+
 
 function cargarCards() {
   contenedor.innerHTML="";
@@ -87,15 +99,16 @@ function cargarCards() {
               </div>
               <div class="card-footer">
                 <p>$${productos[i].precio}</p>
-              </div>
+              
               <a href="#" class="btn btn-secondary" onclick="agregarCarrito(${productos[i].codigo})">Carrito</a>
-            </div>`;
+              </div>
+              </div>`;
     contenedor.appendChild(div);
   }
 }
 
 function agregarCarrito(codigo) {
-  contenedor.innerHTML = '<div></div>';
+  //contenedor.innerHTML = '<div></div>';
   let indexProd = productos.findIndex(function (prod) {
     return prod.codigo === codigo;
   });
@@ -128,19 +141,10 @@ function agregarCarrito(codigo) {
   }
 }
 
-function contarCarrito() {
-  let sumaCantidad = 0;
-  for (let i = 0; i < carrito.length; i++) {
-    sumaCantidad += carrito[i].cantidad;
-  }
-  contadorCarrito.innerHTML = sumaCantidad;
-}
 
 
-/* ====================
-cargarModal()
-=======================
-*/
+//cargarModal()
+//--------------------------------------------------------------
 
 function cargarModal() {
   cuerpoModal.innerHTML = "";
@@ -159,7 +163,7 @@ function cargarModal() {
     let div = document.createElement("div");
     div.classList = "card mb-2";
     let detalle = `
-<div class="row no-gutters">
+    <div class="row no-gutters">
     <div class="col-md-4">
       <img class="imagenCarrito" src="${prod.imagen}" alt="${prod.nombre}">
     </div>
@@ -180,10 +184,8 @@ function cargarModal() {
   suma.innerHTML = `<b>$${sumaCarrito}</b>`;
 }
 
-/*=============
-mostrarModal()
-===============
-*/
+//mostrarModal()
+//--------------------------------------------------------
 
 function verCarrito() {
   cargarModal();
@@ -207,12 +209,14 @@ function delElementCarrito(id) {
   })
   productos[indexProd].stock+=cantidad
   localStorage.setItem("prductos", JSON.stringify(productos))
-  cargarCard()
+  cargarCards()
   cargarModal()
-  cantidadCarrito()
+  contarCarrito()
 }
 
 
 
 cargarCard();
-cantidadCarrito();
+contarCarrito();
+
+
