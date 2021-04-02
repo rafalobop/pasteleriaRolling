@@ -1,32 +1,61 @@
 html{
-    font-size: 62.5%;
-  }
+  font-size: 62.5%;
+}
   
-  body{
-    font-size: 1.5rem;
-  }
+body{
+  font-size: 1.5rem;
+}
   
-  /*Header*/
-  #header nav{
-      background-color: white !important;
-      font-family: 'Palanquin Dark', sans-serif;
-  }
+/*Header*/
+#header nav{
+  background-color: white !important;
+  font-family: 'Palanquin Dark', sans-serif;
+}
   
-  #header img{
-    height: 8rem;
-  }
+#header img{
+  height: 8rem;
+}
   
-  .nav-item i,
-  .nav-item span{
-    color: #c14679;
-  }
+.nav-item i,
+.nav-item span{
+  color: #c14679;
+}
   
-  .nav-item span{
-    font-size: 120%;
-  }
+.nav-item span{
+  font-size: 120%;
+}
   
-  .nav-item i{
+.nav-item i{
   font-size: 150%;
   margin-top: 12%;
+}
+/*Fin del header*/
+ 
+/*Main*/
+#carousel{
+  position: relative;
+}
   
-  }
+#carousel .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;   
+  right: 0;
+  background-color:rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1;
+}
+  
+#carousel .overlay .container,
+#carousel .overlay .row{
+  height: 100%;
+}
+
+#carousel .overlay button,
+#carousel .overlay a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #c14679;
+}
