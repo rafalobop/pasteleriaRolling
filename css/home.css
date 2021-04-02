@@ -1,0 +1,32 @@
+html{
+    font-size: 62.5%;
+  }
+  
+  body{
+    font-size: 1.5rem;
+  }
+  
+  /*Header*/
+  #header nav{
+      background-color: white !important;
+      font-family: 'Palanquin Dark', sans-serif;
+  }
+  
+  #header img{
+    height: 8rem;
+  }
+  
+  .nav-item i,
+  .nav-item span{
+    color: #c14679;
+  }
+  
+  .nav-item span{
+    font-size: 120%;
+  }
+  
+  .nav-item i{
+  font-size: 150%;
+  margin-top: 12%;
+  
+  }
