@@ -17,6 +17,16 @@ body {
 .navbar-items {
   background: #fcecef;
 }
+#countCarrito {
+  position: relative;
+  top: -20px;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  text-align: center;
+  background: #faa8a5;
+  color: #fff;
+}
 #navbarNav .navbar-items li a {
   color: #c17397;
   font-family: 'euphoria script', cursive;
