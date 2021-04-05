@@ -63,7 +63,7 @@ let prod6 = new Producto(
   10
 );
 
-productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
+// productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
 console.log(productos);
 
 // localStorage.setItem('productos', JSON.stringify(productos));
