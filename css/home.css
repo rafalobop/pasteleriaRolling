@@ -1,158 +1,62 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+
+html{
+  font-size: 62.5%;
 }
-body {
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  color: #c17397;
-  background-color: #fcecef;
-}
-.container-navbar,
-#navbarNav,
-.navbar-items {
-  background: #fcecef;
-}
-#countCarrito {
-  position: relative;
-  top: -20px;
-  width: 16px;
-  height: 16px;
-  font-size: 12px;
-  text-align: center;
-  background: #faa8a5;
-  color: #fff;
-}
-#navbarNav .navbar-items li a {
-  color: #c17397;
-  font-family: 'euphoria script', cursive;
-  font-size: 1.5rem;
-  margin-right: 30px;
-  font-weight: 500;
-}
-#navbarNav .navbar-items li a:hover {
-  color: #faa8a5;
-}
-.footer {
-  color: #c17397;
-}
-.footer-title {
-  padding: 2%;
-  text-align: center;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-  font-family: 'Euphoria script', cursive;
-}
-.left,
-.right {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  
+body{
   font-size: 1.5rem;
 }
-.right ul {
-  list-style: none;
+  
+/*Header*/
+#header nav{
+  background-color: white !important;
+  font-family: 'Palanquin Dark', sans-serif;
 }
-.right ul li {
-  color: #c17397;
-  font-weight: 400;
+  
+#header img{
+  height: 8rem;
 }
-.left a,
-.right ul li a {
-  color: #c17397;
-  font-family: 'Euphoria script', cursive;
+  
+.nav-item i,
+.nav-item span{
+  color: #c14679;
 }
-.left a:hover,
-.right ul li a:hover {
-  text-decoration: none;
-  color: #faa8a5;
+  
+.nav-item span{
+  font-size: 120%;
 }
-.jumbotron {
-  background: url(../img/asd.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  
+.nav-item i{
+  font-size: 150%;
+  margin-top: 12%;
 }
-.jumbotron h1,
-.jumbotron p {
-  color: #fcecef;
-  text-align: right;
-  font-weight: 500;
-}
-.jumbotron p {
-  font-size: 2rem;
-}
-.slider img {
-  border-radius: 20px;
-}
-.cards-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 2%;
-}
-/* .cards-container .card {
-  margin-right: 3%;
-  margin-top: 3%;
-}
-.cards-container .card img {
-  width: 100%;
-  height: 100%;
-} */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  padding: 2%;
-}
-.carousel-item.active img {
-  border: 2px solid #c17397;
-}
-.flip-card-inner {
+/*Fin del header*/
+ 
+/*Main*/
+#carousel{
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border: 2px solid #c17397;
 }
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
+  
+#carousel .overlay{
   position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-.flip-card-front img {
-  width: 100%;
-  height: 100%;
-}
-
-.flip-card-back {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #c17397;
+  top: 0;
+  bottom: 0;
+  left: 0;   
+  right: 0;
+  background-color:rgba(0, 0, 0, 0.5);
   color: white;
-  transform: rotateY(180deg);
+  z-index: 1;
 }
-.flip-card-back h1 {
-  font-family: 'euphoria script', cursive;
+  
+#carousel .overlay .container,
+#carousel .overlay .row{
+  height: 100%;
+}
+
+#carousel .overlay button,
+#carousel .overlay a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #c14679;
 }
