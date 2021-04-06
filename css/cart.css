@@ -37,7 +37,16 @@ body {
   letter-spacing: 0.5px;
   font-family: 'Euphoria script', cursive;
 }
-
+#countCarrito {
+  position: relative;
+  top: -20px;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  text-align: center;
+  background: #faa8a5;
+  color: #fff;
+}
 .footer {
   color: #c17397;
 }
