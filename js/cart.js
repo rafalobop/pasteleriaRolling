@@ -20,48 +20,48 @@ let contadorCarrito = document.querySelector('#countCarrito');
 
 let cuerpoModal = document.querySelector('.modal-body');
 
-let prod1 = new Producto(
-  1,
-  'Brownie con dulce de leche',
-  70,
-  'https://esruiz.com.ar/shop/wp-content/uploads/2018/07/brownie_grande_img_5490.jpg',
-  10
-);
-let prod2 = new Producto(
-  2,
-  'Coco con dulce de leche',
-  60,
-  'https://cdn.cienradios.com/wp-content/uploads/sites/13/2015/05/barritas-de-coco-y-dulce-de-lecheWEB.jpg',
-  9
-);
-let prod3 = new Producto(
-  3,
-  'Pastafrola',
-  50,
-  'https://recetaland.com/wp-content/uploads/2020/03/9.-pasta-frola-vegana-DF.jpg',
-  9
-);
-let prod4 = new Producto(
-  4,
-  'alfajor de maicena',
-  40,
-  'https://scm-assets.constant.co/scm/unilever/2bb5223be0548fcc55c230aa5f951219/ce65930b-bc22-4bf3-9aa8-1e6b2708f982.png',
-  10
-);
-let prod5 = new Producto(
-  5,
-  'tocinitos del cielo',
-  30,
-  'https://confiteriasemiliomarin.es/wp-content/uploads/2018/07/tocino-de-cielo.jpg',
-  10
-);
-let prod6 = new Producto(
-  6,
-  'crumble de manzana',
-  70,
-  'https://cdn.cienradios.com/wp-content/uploads/sites/3/2020/03/crumble-de-manzana.jpg',
-  10
-);
+// let prod1 = new Producto(
+//   1,
+//   'Brownie con dulce de leche',
+//   70,
+//   'https://esruiz.com.ar/shop/wp-content/uploads/2018/07/brownie_grande_img_5490.jpg',
+//   10
+// );
+// let prod2 = new Producto(
+//   2,
+//   'Coco con dulce de leche',
+//   60,
+//   'https://cdn.cienradios.com/wp-content/uploads/sites/13/2015/05/barritas-de-coco-y-dulce-de-lecheWEB.jpg',
+//   9
+// );
+// let prod3 = new Producto(
+//   3,
+//   'Pastafrola',
+//   50,
+//   'https://recetaland.com/wp-content/uploads/2020/03/9.-pasta-frola-vegana-DF.jpg',
+//   9
+// );
+// let prod4 = new Producto(
+//   4,
+//   'alfajor de maicena',
+//   40,
+//   'https://scm-assets.constant.co/scm/unilever/2bb5223be0548fcc55c230aa5f951219/ce65930b-bc22-4bf3-9aa8-1e6b2708f982.png',
+//   10
+// );
+// let prod5 = new Producto(
+//   5,
+//   'tocinitos del cielo',
+//   30,
+//   'https://confiteriasemiliomarin.es/wp-content/uploads/2018/07/tocino-de-cielo.jpg',
+//   10
+// );
+// let prod6 = new Producto(
+//   6,
+//   'crumble de manzana',
+//   70,
+//   'https://cdn.cienradios.com/wp-content/uploads/sites/3/2020/03/crumble-de-manzana.jpg',
+//   10
+// );
 
 // productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
 console.log(productos);
