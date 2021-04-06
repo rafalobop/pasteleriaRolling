@@ -1,3 +1,117 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+}
+
+
+/* Footer */
+#footer .container{
+    display: flex;
+}
+
+#footer h4{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+}
+
+#footer .img-galery{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #c14679;
+}
+
+#footer .img-galery img{
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1.05);
+    transition: all .3s;
+}
+
+#footer .img-galery img:hover{
+    transform: scale(1);
+    transition: all .3s;
+}
+
+#footer ul, li{
+    list-style: none;
+    text-decoration: none;
+}
+#footer li a{
+    text-decoration: none;
+}
+
+ul.icons-footer{
+    display: flex;
+}
+
+ul.icons-footer li{
+    text-align: center;
+}
+#op-logo:after{
+	content:"";
+	padding:0px 56px 15px 56px;
+	background-image:url('');
+	background-repeat:no-repeat;
+	background-size:cover;
+	margin-right:9px;
+}
+#op-footer span{
+    line-height: 45px;
+}
+
+.paginas-footer li::before{
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    height: 1px;
+    width: 12px;
+    margin-right: 10px;
+    background: #d7d7d7;
+    transition: inherit;
+
+}
+
+.paginas-footer li:hover{
+    transition: all .4s;
+    transform: translateX(15px)
+}
+
+
+#footer li{
+    font-size: 14px;
+    color: #cb8b88;
+}
+#footer li a{
+    font-size: 14px;
+    color: #000000;
+}
+#footer li a:hover{
+    transition: all .4s;
+    font-size: 14px;
+    color: #cb8b88;
+}
+
+@media (max-width: 578px){
+    #footer .grid-galery{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+/* fin de footer */
+=======
 html {
   font-size: 62.5%;
 }
@@ -113,4 +227,5 @@ body {
 }
 .flip-card-back h1 {
   font-family: 'euphoria script', cursive;
+
 }
