@@ -14,7 +14,6 @@
 #header nav {
   background-color: white !important;
   font-family: 'Palanquin Dark', sans-serif;
-
 }
 
 #header img {
@@ -29,7 +28,6 @@
 .nav-item span {
   font-size: 120%;
 }
-
 
 #header img {
   height: 8rem;
@@ -47,7 +45,6 @@
   font-size: 120%;
 }
 
-
 .nav-item i {
   font-size: 150%;
   margin-top: 12%;
@@ -58,9 +55,10 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   color: #c17397;
   background-color: #fff;
+  font-size: 15px;
 }
 .title {
   font-size: 3.5rem;
@@ -177,18 +175,7 @@ ul.icons-footer li {
 
 /* fin de footer */
 
-
 /* modal carrito*/
-
-.imagenCarrito {
-  /*width: 150px;
-  object-fit: contain;*/
-  width: 150px;
-  height: 155px;
-  border-top-left-radius: 40px;
-  /*border-top-right-radius: 40px;*/
-}
-
 
 .imagenCarrito {
   /*width: 150px;
