@@ -176,3 +176,27 @@ ul.icons-footer li {
 }
 
 /* fin de footer */
+
+
+/* modal carrito*/
+
+.imagenCarrito {
+  /*width: 150px;
+  object-fit: contain;*/
+  width: 150px;
+  height: 155px;
+  border-top-left-radius: 40px;
+  /*border-top-right-radius: 40px;*/
+}
+
+
+/* modal carrito*/
+
+.imagenCarrito {
+  /*width: 150px;
+  object-fit: contain;*/
+  width: 150px;
+  height: 155px;
+  border-top-left-radius: 40px;
+  /*border-top-right-radius: 40px;*/
+}

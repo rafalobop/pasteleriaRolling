@@ -103,7 +103,7 @@ function cargarCards() {
 }
 
 function agregarCarrito(codigo) {
-  contenedor.innerHTML = '<div></div>';
+  //contenedor.innerHTML = '<div></div>';
   let indexProd = productos.findIndex(function (prod) {
     return prod.codigo === codigo;
   });
@@ -207,6 +207,6 @@ function delElementCarrito(id) {
 }
 
 
-cargarCard();
+cargarCards();
 contarCarrito();
 
