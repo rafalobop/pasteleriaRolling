@@ -53,13 +53,3 @@ function enviarForm(e) {
   form.reset();
   alert('Registro exitoso');
 }
-
-// function enviarForm(e) {
-//   e.preventDefault();
-//   let users = Array({
-//     usuario: user.value,
-//     contraseña: pass.value,
-//   });
-//   localStorage.setItem('users', JSON.stringify(users));
-//   location.href = 'home.html';
-// }

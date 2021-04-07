@@ -14,6 +14,7 @@
 #header nav {
   background-color: white !important;
   font-family: 'Palanquin Dark', sans-serif;
+
 }
 
 #header img {
@@ -28,6 +29,24 @@
 .nav-item span {
   font-size: 120%;
 }
+
+
+#header img {
+  height: 8rem;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+.nav-item i,
+.nav-item span {
+  color: #c14679;
+}
+
+.nav-item span {
+  font-size: 120%;
+}
+
 
 .nav-item i {
   font-size: 150%;
