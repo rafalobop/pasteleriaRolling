@@ -19,7 +19,7 @@ let contenedor = document.querySelector('#contenedor');
 let contadorCarrito = document.querySelector('#countCarrito');
 
 let cuerpoModal = document.querySelector('.modal-body');
-
+/*
 let prod1 = new Producto(
   1,
   'Brownie con dulce de leche',
@@ -61,12 +61,14 @@ let prod6 = new Producto(
   70,
   'https://cdn.cienradios.com/wp-content/uploads/sites/3/2020/03/crumble-de-manzana.jpg',
   10
-);
+  );
 
-// productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
+*/
+
+//productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
 console.log(productos);
 
-// localStorage.setItem('productos', JSON.stringify(productos));
+//localStorage.setItem('productos', JSON.stringify(productos));
 
 window.addEventListener('load', cargarCards);
 
@@ -81,6 +83,7 @@ function contarCarrito() {
 
 
 function cargarCards() {
+  contenedor.innerHTML="";
   for (let i = 0; i < productos.length; i++) {
     let div = document.createElement('div');
     div.classList = 'col col-md-4 mt-4';
@@ -207,6 +210,6 @@ function delElementCarrito(id) {
 }
 
 
-cargarCards();
+cargarCard();
 contarCarrito();
 
