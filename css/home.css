@@ -8,6 +8,72 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
 }
+
+
+/*Header*/
+#header nav {
+  background-color: white !important;
+  font-family: 'Palanquin Dark', sans-serif;
+}
+
+#header img {
+  height: 80px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item i,
+.nav-item span {
+  color: #c14679;
+}
+
+.nav-item span {
+  font-size: 15px;
+}
+
+.nav-item i {
+  font-size: 18px;
+}
+/*Fin del header*/
+
+/*Main*/
+#carousel {
+  position: relative;
+}
+
+#carousel .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1;
+}
+
+
+#carousel .overlay h1{
+  font-size: 30px;
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row {
+  height: 100%;
+}
+
+#carousel .overlay button,
+#carousel .overlay a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #c14679;
+}
+
+/*Categorias*/
 .categories_title {
   text-align: center;
   padding-top: 10px;
@@ -15,6 +81,64 @@ body {
   color: #c14679;
   font-size: 2.2rem;
 }
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  padding: 2%;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 2px solid #c17397;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c17397;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back h1 {
+  font-family: 'euphoria script', cursive;
+}
+
+
 /* Footer */
 #footer .container {
   display: flex;
@@ -113,117 +237,7 @@ ul.icons-footer li {
 
 /* fin de footer */
 
-/*Header*/
-#header nav {
-  background-color: white !important;
-  font-family: 'Palanquin Dark', sans-serif;
-}
 
-#header img {
-  height: 8rem;
-}
-
-.nav-item i,
-.nav-item span {
-  color: #c14679;
-}
-
-.nav-item span {
-  font-size: 120%;
-}
-.navbar-nav {
-  display: flex;
-  align-items: center;
-}
-.nav-item i {
-  font-size: 150%;
-  margin-top: 12%;
-}
-/*Fin del header*/
-
-/*Main*/
-#carousel {
-  position: relative;
-}
-
-#carousel .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  z-index: 1;
-}
-
-#carousel .overlay .container,
-#carousel .overlay .row {
-  height: 100%;
-}
-
-#carousel .overlay button,
-#carousel .overlay a {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: white;
-  background-color: #c14679;
-}
-.cards-container {
-  display: flex;
-  justify-content: center;
-}
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-  padding: 2%;
-}
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border: 2px solid #c17397;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-.flip-card-front img {
-  width: 100%;
-  height: 100%;
-}
-
-.flip-card-back {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #c17397;
-  color: white;
-  transform: rotateY(180deg);
-}
-.flip-card-back h1 {
-  font-family: 'euphoria script', cursive;
-}
 /* Footer */
 #footer .container {
   display: flex;
