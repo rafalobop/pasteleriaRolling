@@ -133,3 +133,6 @@ function contarCarrito() {
   }
   contadorCarrito.innerHTML = sumaCantidad;
 }
+
+
+//cambio en el tester
