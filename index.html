@@ -14,7 +14,7 @@
     />
     <!--estilos css-->
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/logo.jpeg" type="image/x-icon" />
     <!--Boxicons-->
     <link
       rel="stylesheet"
@@ -39,19 +39,32 @@
       <div class="logo"></div>
       <div class="title">La mejor reposter&iacute;a</div>
       <div class="subtitle">del pa&iacute;s</div>
-      <div class="fields">
+      <form class="form">
         <div class="username">
           <i class="bx bxs-user"></i>
-          <input type="text" class="user-input" placeholder="Usuario" />
+          <input
+            type="text"
+            id="user"
+            class="user-input"
+            placeholder="Usuario"
+            required
+          />
         </div>
         <div class="password">
           <i class="bx bxs-lock"></i>
-          <input type="password" class="pass-input" placeholder="Contraseña" />
+          <input
+            type="password"
+            id="pass"
+            class="pass-input"
+            placeholder="Contraseña"
+            required
+          />
         </div>
-      </div>
-      <button class="signin-button">Ingresar</button>
+        <button class="signin-button">Ingresar</button>
+      </form>
       <div class="link">
-        <a href="#">Olvidaste tu contraseña?</a>
+        <a href="#">Olvidaste tu contraseña?</a><br />
+        <a href="#">Nuevo aqu&iacute;? Reg&iacute;strate!</a>
       </div>
     </div>
     <!--Bootstrap scripts-->
@@ -74,5 +87,6 @@
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     <!--scripts-->
     <script src="./js/index.js"></script>
+
   </body>
 </html>
