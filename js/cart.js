@@ -70,6 +70,16 @@ console.log(productos);
 
 window.addEventListener('load', cargarCards);
 
+//contar carrito
+function contarCarrito() {
+  let sumaCantidad = 0;
+  for (let i = 0; i < carrito.length; i++) {
+    sumaCantidad += carrito[i].cantidad;
+  }
+  contadorCarrito.innerHTML = sumaCantidad;
+}
+
+
 function cargarCards() {
   for (let i = 0; i < productos.length; i++) {
     let div = document.createElement('div');
@@ -126,13 +136,77 @@ function agregarCarrito(codigo) {
   }
 }
 
-function contarCarrito() {
-  let sumaCantidad = 0;
-  for (let i = 0; i < carrito.length; i++) {
-    sumaCantidad += carrito[i].cantidad;
+
+//cargarModal()
+//--------------------------------------------------------------
+
+function cargarModal() {
+  cuerpoModal.innerHTML = "";
+
+  let suma = document.querySelector("#totalCarrito");
+  sumaCarrito = 0;
+
+  if (carrito.length === 0) {
+    cuerpoModal.innerHTML = "<h3>No hay productos en el carrito</h3>";
+    sumaCarrito = 0;
+    suma.innerHTML = `<b>${sumaCarrito}</b>`;
+    return;
   }
-  contadorCarrito.innerHTML = sumaCantidad;
+
+  carrito.forEach(function (prod) {
+    let div = document.createElement("div");
+    div.classList = "card mb-2";
+    let detalle = `
+    <div class="row no-gutters">
+    <div class="col-md-4">
+      <img class="imagenCarrito" src="${prod.imagen}" alt="${prod.nombre}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">${prod.cantidad} ${prod.nombre}</h5>
+        <p class="card-text">Precio: $${prod.precio}</p>
+        <a href="#" class="btn btn-secondary"onclick="delElementCarrito(${prod.id})">Eliminar</a>
+      </div>
+    </div>
+  </div>
+`;
+    div.innerHTML = detalle;
+    cuerpoModal.appendChild(div);
+    sumaCarrito += prod.precio;
+  });
+
+  suma.innerHTML = `<b>$${sumaCarrito}</b>`;
+}
+
+//mostrarModal()
+//--------------------------------------------------------
+
+function verCarrito() {
+  cargarModal();
+  $("#modalCarrito").modal("show");
 }
 
 
-//cambio en el tester
+function delElementCarrito(id) {
+  let index=carrito.findIndex(function(prod){
+    return prod.id===id
+  })
+  let cantidad=carrito[index].cantidad
+  carrito.splice(index,1)
+  localStorage.setItem("carrito", JSON.stringify(carrito))
+
+  //manejar el tema del stock
+  let indexProd=productos.findIndex(function(prod){
+    return prod.codigo===id
+  })
+  productos[indexProd].stock+=cantidad
+  localStorage.setItem("prductos", JSON.stringify(productos))
+  cargarCards()
+  cargarModal()
+  contarCarrito()
+}
+
+
+cargarCard();
+contarCarrito();
+
