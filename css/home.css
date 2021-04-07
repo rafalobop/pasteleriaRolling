@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,7 +8,13 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
 }
-
+.categories_title {
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 20px;
+  color: #c14679;
+  font-size: 2.2rem;
+}
 /* Footer */
 #footer .container {
   display: flex;
@@ -48,7 +53,6 @@ li {
 }
 #footer li a {
   text-decoration: none;
-
 }
 
 ul.icons-footer {
@@ -127,7 +131,10 @@ ul.icons-footer li {
 .nav-item span {
   font-size: 120%;
 }
-
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
 .nav-item i {
   font-size: 150%;
   margin-top: 12%;
