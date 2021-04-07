@@ -213,3 +213,4 @@ function delElementCarrito(id) {
 cargarCard();
 contarCarrito();
 
+//funcionando carrito y modal ahora pull request
