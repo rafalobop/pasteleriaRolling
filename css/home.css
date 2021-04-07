@@ -73,6 +73,13 @@ body {
   background-color: #c14679;
 }
 
+@media (min-height: 360px){
+  #carousel img{
+    min-height: 220px;
+    object-fit: cover;
+  }
+}
+
 /*Categorias*/
 .categories_title {
   text-align: center;
