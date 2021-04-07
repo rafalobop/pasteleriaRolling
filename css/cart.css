@@ -10,16 +10,33 @@
   border-top-right-radius: 40px;
   box-shadow: 3px 3px 9px #8f345e;
 }
-#navbarNav .navbar-items li a {
-  color: #c17397;
-  font-family: 'euphoria script', cursive;
-  font-size: 1.5rem;
-  margin-right: 30px;
-  font-weight: 500;
+/*Header*/
+#header nav {
+  background-color: white !important;
+  font-family: 'Palanquin Dark', sans-serif;
 }
-#navbarNav .navbar-items li a:hover {
-  color: #faa8a5;
+
+#header img {
+  height: 8rem;
 }
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+.nav-item i,
+.nav-item span {
+  color: #c14679;
+}
+
+.nav-item span {
+  font-size: 120%;
+}
+
+.nav-item i {
+  font-size: 150%;
+  margin-top: 12%;
+}
+/*Fin del header*/
 
 body {
   height: 100%;
@@ -28,7 +45,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   color: #c17397;
-  background-color: #fcecef;
+  background-color: #fff;
 }
 .title {
   font-size: 3.5rem;

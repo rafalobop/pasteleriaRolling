@@ -35,11 +35,11 @@
     />
   </head>
   <body>
-    <header>
-      <div class="container-navbar p-4">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="./home.html"
-            ><img src="./img/logo.png" width="120" alt=""
+    <header id="header" class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="home.html"
+            ><img src="./img/logohome.png" alt="logo"
           /></a>
           <button
             class="navbar-toggler"
@@ -52,32 +52,29 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav p-3 navbar-items">
-              <li class="nav-item">
-                <a class="nav-link" href="home.html">Inicio</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto text-uppercase">
+              <li class="nav-item active">
+                <a class="nav-link" href="home.html"
+                  >Inicio <span class="sr-only">(current)</span></a
+                >
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="cart.html"
-                  >Productos<span class="sr-only">(current)</span></a
-                >
+                <a class="nav-link" href="#">Productos</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#carrito"
-                  ><i class="bx bx-cart-alt"
-                    ><span id="countCarrito" class="badge badge-light"
-                      >0</span
-                    ></i
-                  ></a
-                >
+                <button type="button" class="btn btn-light pb-3">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  <span id="countCarrito" class="badge badge-light">0</span>
+                </button>
               </li>
             </ul>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
     <main class="container">
       <div class="row mt-4">
@@ -129,6 +126,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://use.fontawesome.com/823835b326.js"></script>
     <!--boxicons scripts-->
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     <!--scripts-->
