@@ -89,7 +89,7 @@ function validarRegistro(e) {
   let emailReg = document.querySelector('#email_r').value;
 
   let validar = usuarios.find(function (user) {
-    return user.email === email;
+    return user.emailReg === emailReg;
   });
 
   if (validar !== undefined) {
@@ -115,5 +115,11 @@ function validarRegistro(e) {
   localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
   formularioReg.reset();
-  alert('Registro exitoso');
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Registro exitoso',
+    showConfirmButton: false,
+    timer: 1500,
+  });
 }
