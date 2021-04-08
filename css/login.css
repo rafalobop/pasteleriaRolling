@@ -13,10 +13,20 @@ body {
   background-position-x: 20%;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: #c17397;
   background-color: #fcecef;
+}
+
+.show {
+  display: block;
+  transition: all 1s ease-in-out;
+}
+.hide {
+  display: none;
+  transition: all 1s ease-in-out;
 }
 .login-div {
   width: 380px;
@@ -47,6 +57,14 @@ body {
   font-weight: 400;
   font-family: 'euphoria script', cursive;
 }
+#title_r {
+  font-size: 30px;
+  padding-top: 5px;
+}
+#sub_r {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
 .subtitle {
   text-align: center;
   font-size: 30px;
@@ -57,6 +75,10 @@ body {
 .form {
   width: 100%;
   padding-top: 2%;
+}
+#form_r input {
+  font-size: 15px;
+  padding: 1.2%;
 }
 .form input {
   border: none;
