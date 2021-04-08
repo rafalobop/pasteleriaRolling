@@ -99,7 +99,7 @@ function cargarCards() {
   contenedor.innerHTML = '';
   for (let i = 0; i < productos.length; i++) {
     let div = document.createElement('div');
-    div.classList = 'col col-md-4 mt-4';
+    div.classList = 'col-md-6 col-lg-4 mt-4';
     div.innerHTML = `
             <div class="card">
               <img src="${productos[i].imagen}" class="card-img-top imgCard" alt="${productos[i].nombre}" />

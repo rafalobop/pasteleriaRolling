@@ -325,6 +325,9 @@ ul.icons-footer li {
 }
 #op-footer span {
   line-height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .paginas-footer li::before {
