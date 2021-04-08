@@ -97,6 +97,7 @@ ul.icons-footer li {
 #footer li a {
   font-size: 14px;
   color: #000000;
+  font-weight: normal !important;
 }
 #footer li a:hover {
   transition: all 0.4s;
