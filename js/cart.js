@@ -148,7 +148,11 @@ function agregarCarrito(codigo) {
     cargarCards();
     contarCarrito();
   } else {
-    alert('No hay stock disponible');
+    Swal.fire({
+      icon: 'error',
+      title: 'ups!',
+      text: 'No hay stock disponible',
+    });
   }
 }
 

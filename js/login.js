@@ -93,7 +93,11 @@ function validarRegistro(e) {
   });
 
   if (validar !== undefined) {
-    alert('Usuario existente. Intenta con otro email');
+    Swal.fire({
+      icon: 'error',
+      title: 'Ups!',
+      text: 'Este usuario ya existe. Intenta con otro',
+    });
 
     formularioReg.reset();
 
@@ -166,6 +170,7 @@ function validar() {
         showConfirmButton: false,
         timer: 3000,
       });
+
       if (pass.id === 9999) {
         setTimeout(() => {
           location.href = 'admin.html';
@@ -175,10 +180,19 @@ function validar() {
         location.href = 'cart.html';
       }, 3000);
     } else {
-      alert('Mail o contraseña incorrectos');
+      Swal.fire({
+        icon: 'error',
+        title: 'Ups!',
+        text: 'usuario o contraseña incorrectos',
+      });
     }
   } else {
-    alert('Mail incorrectos');
+    Swal.fire({
+      icon: 'error',
+      title: 'Ups!',
+      text: 'usuario o contraseña incorrectos',
+    });
+    document.querySelector('#form_login').reset();
   }
 }
 
