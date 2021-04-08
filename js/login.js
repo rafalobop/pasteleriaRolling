@@ -100,12 +100,17 @@ function validarRegistro(e) {
     return;
   }
   if (passwordReg !== passRep) {
-    let divError = document.querySelector('.error');
+    let divError = document.createElement('div');
+    let formularioReg = document.querySelector('#form_r');
+    divError.classList.add('error');
     divError.textContent = 'Las contraseñas no coinciden';
     setTimeout(() => {
       divError.remove();
     }, 1500);
     formularioReg.reset();
+
+    formularioReg.appendChild(divError);
+    return;
   }
 
   let newUser = new Usuario(idReg, usuarioReg, passwordReg, passRep, emailReg);
@@ -123,3 +128,63 @@ function validarRegistro(e) {
     timer: 1500,
   });
 }
+
+//formulario login
+
+let admin = new Usuario(9999, 'admin', 'admin', 'admin', 'admin@compraya.com');
+// let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+// llamamos a los usuarios de localstorage
+//creamos un objeto vacio
+let usuario = {};
+let btn_log = document.querySelector('#btn_log');
+usuarios.push(admin);
+//logica del login
+localStorage.setItem('usuarios', JSON.stringify(usuarios));
+function validar() {
+  let inputUser = document.querySelector('#user');
+  let inputPassword = document.querySelector('#pass');
+
+  //identificar el usuario
+  let user = usuarios.find(function (user) {
+    return user.usuario === inputUser.value;
+  });
+  //si se ingresa el usuario verifica la contraseña
+  if (user !== undefined) {
+    let pass = usuarios.find(function (user) {
+      return user.password === inputPassword.value;
+    });
+    if (pass !== undefined) {
+      usuario = {
+        id: pass.id,
+        user: pass.usuario,
+      };
+      localStorage.setItem('usuario', JSON.stringify(usuario));
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Registro exitoso',
+        showConfirmButton: false,
+        timer: 3000,
+      });
+      if (pass.id === 9999) {
+        setTimeout(() => {
+          location.href = 'admin.html';
+        }, 3000);
+      }
+      setTimeout(() => {
+        location.href = 'cart.html';
+      }, 3000);
+    } else {
+      alert('Mail o contraseña incorrectos');
+    }
+  } else {
+    alert('Mail incorrectos');
+  }
+}
+
+let ingresar = document
+  .querySelector('#form_login')
+  .addEventListener('submit', function (e) {
+    e.preventDefault();
+    validar();
+  });
