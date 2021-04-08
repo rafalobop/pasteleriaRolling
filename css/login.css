@@ -19,7 +19,10 @@ body {
   color: #c17397;
   background-color: #fcecef;
 }
-
+.error {
+  background: #e24141a1;
+  color: #680000;
+}
 .show {
   display: block;
 }
