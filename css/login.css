@@ -22,11 +22,9 @@ body {
 
 .show {
   display: block;
-  transition: all 1s ease-in-out;
 }
 .hide {
   display: none;
-  transition: all 1s ease-in-out;
 }
 .login-div {
   width: 380px;

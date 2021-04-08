@@ -62,24 +62,44 @@ let formReg = document.querySelector('#form_reg');
 btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
   if (
-    formLog.classList.contains('hide') &&
-    formReg.classList.contains('show')
+    formLog.classList.contains(
+      'hide',
+      'animate__animated',
+      'animate__fadeOutDown'
+    ) &&
+    formReg.classList.contains('show', 'animate__animated', 'animate__fadeInUp')
   ) {
-    formLog.classList.remove('hide');
-    formLog.classList.add('show');
-    formReg.classList.remove('show');
-    formReg.classList.add('hide');
+    formLog.classList.remove(
+      'hide',
+      'animate__animated',
+      'animate__fadeOutDown'
+    );
+    formLog.classList.add('show', 'animate__animated', 'animate__fadeInUp');
+    formReg.classList.remove('show', 'animate__animated', 'animate__fadeInUp');
+    formReg.classList.add('hide', 'animate__animated', 'animate__fadeOutDown');
   }
 });
 btnReg.addEventListener('click', function (e) {
   e.preventDefault();
   if (
-    formLog.classList.contains('show') &&
-    formReg.classList.contains('hide')
+    formLog.classList.contains(
+      'show',
+      'animate__animated',
+      'animate__fadeInUp'
+    ) &&
+    formReg.classList.contains(
+      'hide',
+      'animate__animated',
+      'animate__fadeOutDown'
+    )
   ) {
-    formLog.classList.remove('show');
-    formLog.classList.add('hide');
-    formReg.classList.remove('hide');
-    formReg.classList.add('show');
+    formLog.classList.remove('show', 'animate__animated', 'animate__fadeInUp');
+    formLog.classList.add('hide', 'animate__animated', 'animate__fadeOutDown');
+    formReg.classList.remove(
+      'hide',
+      'animate__animated',
+      'animate__fadeOutDown'
+    );
+    formReg.classList.add('show', 'animate__animated', 'animate__fadeInUp');
   }
 });
