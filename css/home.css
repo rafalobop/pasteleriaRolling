@@ -80,11 +80,13 @@ body {
 
 /*Categorias*/
 .categories_title {
+  font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
   text-align: center;
   padding-top: 10px;
   margin-top: 20px;
   color: #c14679;
-  font-size: 2.2rem;
+  font-size: 35px;
 }
 
 .cards-container {
@@ -169,6 +171,33 @@ body {
 .flip-card-back h1 {
   font-family: 'euphoria script', cursive;
 }
+
+
+/*Testimonios*/
+#testimonios h3{
+  font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 35px;
+  color: #c14679;
+}
+
+.img-cliente{
+  border-radius: 50px;
+  max-width: 40px;
+}
+
+.card-cliente{
+  box-shadow: 0 0 18px 0 rgb(0 0 0 / 13%)
+}
+
+.card-cliente small{
+  color: #c14679;
+}
+
+.card-cliente h6{
+  font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   color: black;
+}
+
 
 /* Footer */
 #footer .container {
