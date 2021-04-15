@@ -34,6 +34,24 @@ body {
 .hide {
   display: none;
 }
+.btn_home {
+  padding: 7%;
+  margin-right: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  background: #c17397;
+  box-shadow: -2px 2px 5px #fff;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.btn_home:hover {
+  box-shadow: -4px 4px 5px #fff;
+  cursor: pointer;
+  background: #c14397;
+  transition: 0.5s;
+}
+
 .login-div {
   width: 380px;
   height: 600px;
