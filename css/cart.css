@@ -39,6 +39,7 @@
   background: none;
   color: #fff;
 }
+
 /*Header*/
 #header nav {
   background-color: white !important;
@@ -55,7 +56,11 @@
 }
 
 .nav-item span {
-  font-size: 120%;
+  font-size: 15px;
+}
+
+.nav-item i {
+  font-size: 18px;
 }
 
 #header img {

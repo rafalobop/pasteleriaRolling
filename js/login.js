@@ -79,8 +79,8 @@ function idRandom() {
 let formularioReg = document.querySelector('#form_r');
 formularioReg.addEventListener('submit', validarRegistro);
 
-function validarRegistro(e) {
-  e.preventDefault();
+function validarRegistro() {
+  // e.preventDefault();
 
   let idReg = idRandom();
   let usuarioReg = document.querySelector('#user_r').value;
@@ -135,7 +135,7 @@ function validarRegistro(e) {
 
 //formulario login
 
-let admin = new Usuario(9999, 'admin', 'admin', 'admin', 'admin@compraya.com');
+let admin = new Usuario(9999, 'admin', 'admin', 'admin', 'admin@tucucake.com');
 // let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 // llamamos a los usuarios de localstorage
 //creamos un objeto vacio
@@ -159,7 +159,7 @@ function validar() {
     });
     if (pass !== undefined) {
       usuario = {
-        id: pass.id,
+        id: pass.idReg,
         user: pass.usuario,
       };
       localStorage.setItem('usuario', JSON.stringify(usuario));
@@ -171,7 +171,7 @@ function validar() {
         timer: 3000,
       });
 
-      if (pass.id === 9999) {
+      if (pass.idReg === 9999) {
         setTimeout(() => {
           location.href = 'admin.html';
         }, 3000);

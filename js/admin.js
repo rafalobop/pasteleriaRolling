@@ -1,37 +1,33 @@
-let user = JSON.parse(localStorage.getItem("usuario")) || {};
+let user = JSON.parse(localStorage.getItem('usuario')) || {};
 
 // Para Cargar tabla de usuarios
 // Traemos los usuarios
-let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-let tableUser = document.querySelector("#tableUser")
-
+let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+let tableUser = document.querySelector('#tableUser');
 
 // Traemos los productos
-let productos = JSON.parse(localStorage.getItem("productos"))
+let productos = JSON.parse(localStorage.getItem('productos'));
 
-let productTable = document.querySelector("#productTable");
+let productTable = document.querySelector('#productTable');
 
-if(user.id === 999){
-    
-    
-    function cargarTablaUsuarios(){
-        tableUser.innerHTML = "";
+if (user.id === 9999) {
+  function cargarTablaUsuarios() {
+    tableUser.innerHTML = '';
 
-        usuarios.forEach(function(user){
-        let contenido = "";
-        // Creo la etiqueta tr
-        let tr = document.createElement("tr");
-        if(user.usuario === "admin"){
-            // Cargo contenido
+    usuarios.forEach(function (user) {
+      let contenido = '';
+      // Creo la etiqueta tr
+      let tr = document.createElement('tr');
+      if (user.usuario === 'admin') {
+        // Cargo contenido
         contenido = `
         <th scope="row">${user.usuario}</th>
         <td>${user.nombre}</td>
         <td>${user.email}</td>
         <td class="text-center">${user.activo}</td>     
         `;
-
-        }else{
-            contenido = `
+      } else {
+        contenido = `
             <th scope="row">${user.usuario}</th>
             <td>${user.nombre}</td>
             <td>${user.email}</td>
@@ -39,21 +35,21 @@ if(user.id === 999){
             <td class="text-center">
             <a href="#" class="boton-${user.activo}" onclick="activarUser(${user.id})"><i class="fa fa-check-circle-o fa-2x" aria-hidden="true"></i></a> 
             </td>`;
-    }
-     // Asignarle el tr al contenido
-     tr.innerHTML = contenido;
-     tableUser.appendChild(tr)
-  })
-}
+      }
+      // Asignarle el tr al contenido
+      tr.innerHTML = contenido;
+      tableUser.appendChild(tr);
+    });
+  }
 
-   function cargarTablaProductos(){
-       productTable.innerHTML = "";
+  function cargarTablaProductos() {
+    productTable.innerHTML = '';
 
-       productos.forEach(function(prod){
-        let contenido = "";
-        let tr = document.createElement("tr");
+    productos.forEach(function (prod) {
+      let contenido = '';
+      let tr = document.createElement('tr');
 
-        contenido = `
+      contenido = `
       <th scope="row">${prod.codigo}</th>
       <td>${prod.nombre}</td>
       <td>$${prod.precio}</td>
@@ -64,20 +60,17 @@ if(user.id === 999){
       </td>
       `;
 
-      tr.innerHTML = contenido
+      tr.innerHTML = contenido;
       productTable.appendChild(tr);
-    })
+    });
+  }
 
-}
+  cargarTablaUsuarios();
+  cargarTablaProductos();
+} else {
+  contenedor_principal.innerHTML = '';
 
-    cargarTablaUsuarios();
-    cargarTablaProductos();
-
-}else{ 
-    contenedor_principal.innerHTML = "";
-
-
-    let contenido = `  <div class="row">
+  let contenido = `  <div class="row">
     <div class="col">
     <div class="alert alert-danger" role="alert">
     Acceso denegado! Debe loguearse como administrador.
@@ -87,7 +80,6 @@ if(user.id === 999){
 
   contenedor_principal.innerHTML = contenido;
   setTimeout(function () {
-    location.href = "login.html";
+    location.href = 'login.html';
   }, 3000);
-
 }
