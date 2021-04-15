@@ -10,7 +10,7 @@ let productos = JSON.parse(localStorage.getItem('productos'));
 
 let productTable = document.querySelector('#productTable');
 
-if (user.id === 9999) {
+if (user.idReg === 9999) {
   function cargarTablaUsuarios() {
     tableUser.innerHTML = '';
 

@@ -158,27 +158,36 @@ function validar() {
       return user.password === inputPassword.value;
     });
     if (pass !== undefined) {
-      usuario = {
-        id: pass.idReg,
-        user: pass.usuario,
-      };
-      localStorage.setItem('usuario', JSON.stringify(usuario));
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Registro exitoso',
-        showConfirmButton: false,
-        timer: 3000,
-      });
+      if (pass.activo) {
+        usuario = {
+          idReg: pass.idReg,
+          user: pass.usuario,
+        };
+        localStorage.setItem('usuario', JSON.stringify(usuario));
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Registro exitoso',
+          showConfirmButton: false,
+          timer: 3000,
+        });
 
-      if (pass.idReg === 9999) {
-        setTimeout(() => {
-          location.href = 'admin.html';
-        }, 3000);
+        if (pass.idReg === 9999) {
+          setTimeout(() => {
+            location.href = 'admin.html';
+          }, 3000);
+        } else {
+          setTimeout(() => {
+            location.href = 'cart.html';
+          }, 3000);
+        }
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Ups!',
+          text: 'Usted está suspendido. Contáctese con el administrador',
+        });
       }
-      setTimeout(() => {
-        location.href = 'cart.html';
-      }, 3000);
     } else {
       Swal.fire({
         icon: 'error',
