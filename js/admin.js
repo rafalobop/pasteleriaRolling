@@ -1,10 +1,10 @@
 class Producto {
-  constructor(codigo, nombre, imagen, precio, stock){
-    this.codigo = codigo
-    this.nombre = nombre 
-    this.imagen = imagen
-    this.precio = precio
-    this.stock = stock
+  constructor(codigo, nombre, imagen, precio, stock) {
+    this.codigo = codigo;
+    this.nombre = nombre;
+    this.imagen = imagen;
+    this.precio = precio;
+    this.stock = stock;
   }
 }
 
@@ -20,8 +20,7 @@ let productos = JSON.parse(localStorage.getItem('productos'));
 
 let productTable = document.querySelector('#productTable');
 
-let bodyModificaModal = document. querySelector("#bodyModificaModal")
-
+let bodyModificaModal = document.querySelector('#bodyModificaModal');
 
 if (user.idReg === 9999) {
   function cargarTablaUsuarios() {
@@ -55,14 +54,13 @@ if (user.idReg === 9999) {
     });
   }
 
-  function activarUser(id){
-    let index = usuarios.findIndex(function(user){
-      return user.id === id 
-    })
-    usuarios[index].activo = !usuarios[index].activo
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  function activarUser(id) {
+    let index = usuarios.findIndex(function (user) {
+      return user.id === id;
+    });
+    usuarios[index].activo = !usuarios[index].activo;
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
     cargarTablaUsuarios();
-
   }
 
   function cargarTablaProductos() {
@@ -88,19 +86,18 @@ if (user.idReg === 9999) {
     });
   }
 
-  function nuevoProducto(){
+  function nuevoProducto() {
     nuevo = true;
     cargaModalModif();
-    $('#modificarModal').modal('show')
+    $('#modificarModal').modal('show');
   }
 
-  function cargaModalModif(objecto = null){
-    let contenido = ""
-    let title = document.querySelector("#modificarModalLabel");
+  function cargaModalModif(objeto = null) {
+    let contenido = '';
+    let title = document.querySelector('#modificarModalLabel');
 
     // Si el objecto es null significa que es un producto nuevo
-    if(objecto === null){
-
+    if (objeto === null) {
       contenido = `
     <div class="form-group">
     <label for="nombre">Producto</label>
@@ -134,9 +131,9 @@ if (user.idReg === 9999) {
   </div>
   
     `;
-    tittle.innerHTML = "Nuevo producto";
-    //Si el objecto no es null entonces es un producto a modificar 
-    }else{
+      title.innerHTML = 'Nuevo producto';
+      //Si el objecto no es null entonces es un producto a modificar
+    } else {
       contenido = `
       <div class="form-group">
       <label for="nombre">Producto</label>
@@ -168,13 +165,12 @@ if (user.idReg === 9999) {
     </div>
       
       `;
-        title.innerHTML = "Modificar producto";
-      }
-       bodyModificaModal.innerHTML = contenido;
+      title.innerHTML = 'Modificar producto';
     }
+    bodyModificaModal.innerHTML = contenido;
+  }
 
-
-    //----------------------------------------------
+  //----------------------------------------------
 
   //Mostrar modal del producto a modificar---------
   function modificarProd(codigo) {
@@ -183,9 +179,9 @@ if (user.idReg === 9999) {
       return prod.codigo == codigo;
     });
 
-    cargarModalModif(producto);
+    cargaModalModif(producto);
 
-    $("#modificarModal").modal("show");
+    $('#modificarModal').modal('show');
   }
   //--------------------------------------------------
 
@@ -199,50 +195,48 @@ if (user.idReg === 9999) {
 
     if (validar) {
       productos.splice(index, 1);
-      localStorage.setItem("productos", JSON.stringify(productos));
-      cargarTabla();
+      localStorage.setItem('productos', JSON.stringify(productos));
+      cargarTablaProductos();
     }
   }
   //--------------------------------------------------
 
   //Submit formulario Modificar o nuevo-----------------------
-   document
-   .querySelector("#formModif")
-   .addEventListener("submit", function (event) {
-     event.preventDefault();
+  document
+    .querySelector('#formModif')
+    .addEventListener('submit', function (event) {
+      event.preventDefault();
 
-     let codigo = new Date().getTime();
-     let nombre = document.querySelector("#nombre").value;
-     let imagen = document.querySelector("#imagen").value;
-     let precio = document.querySelector("#precio").value;
-     let stock = document.querySelector("#stock").value;
+      let codigo = new Date().getTime();
+      let nombre = document.querySelector('#nombre').value;
+      let imagen = document.querySelector('#imagen').value;
+      let precio = document.querySelector('#precio').value;
+      let stock = document.querySelector('#stock').value;
 
-     if (imagen === "") {
-       imagen = "https://bitsofco.de/content/images/2018/12/broken-1.png";
-     }
+      if (imagen === '') {
+        imagen = 'https://bitsofco.de/content/images/2018/12/broken-1.png';
+      }
 
-     if(nuevo){
-      let newProduct = new Producto(codigo, nombre, imagen, precio, stock);
-      productos.push(newProduct);
-     }else{
-       // Si no es un producto a modificar 
-       let index = productos.findIndex(function (prod) {
-        return prod.codigo === producto.codigo;
-      });
-      productos[index].nombre = nombre;
-      productos[index].imagen = imagen;
-      productos[index].precio = precio;
-      productos[index].stock = stock;
-    }
-     
-     localStorage.setItem("productos", JSON.stringify(productos));
+      if (nuevo) {
+        let newProduct = new Producto(codigo, nombre, imagen, precio, stock);
+        productos.push(newProduct);
+      } else {
+        // Si no es un producto a modificar
+        let index = productos.findIndex(function (prod) {
+          return prod.codigo === producto.codigo;
+        });
+        productos[index].nombre = nombre;
+        productos[index].imagen = imagen;
+        productos[index].precio = precio;
+        productos[index].stock = stock;
+      }
 
-     cargarTablaProductos();
-     $("#modificarModal").modal("hide");
-   });
+      localStorage.setItem('productos', JSON.stringify(productos));
 
+      cargarTablaProductos();
+      $('#modificarModal').modal('hide');
+    });
 
-  
   cargarTablaUsuarios();
   cargarTablaProductos();
 } else {
@@ -261,4 +255,3 @@ if (user.idReg === 9999) {
     location.href = 'login.html';
   }, 3000);
 }
-
