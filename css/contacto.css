@@ -1,11 +1,16 @@
-/* header */
+/*Header*/
 #header nav {
   background-color: white !important;
   font-family: 'Palanquin Dark', sans-serif;
 }
 
 #header img {
-  height: 8rem;
+  height: 80px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
 }
 
 .nav-item i,
@@ -14,12 +19,11 @@
 }
 
 .nav-item span {
-  font-size: 1%;
+  font-size: 15px;
 }
 
 .nav-item i {
-  font-size: 150%;
-  margin-top: 12%;
+  font-size: 18px;
 }
 /*Fin del header*/
 

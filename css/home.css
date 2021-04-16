@@ -1,15 +1,8 @@
 * {
-
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-body{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 15px;
-}
-
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -37,7 +30,6 @@ body {
 }
 
 .nav-item span {
-
   font-size: 15px;
 }
 
@@ -264,76 +256,68 @@ ul.icons-footer li {
   margin-right: 9px;
 }
 
-
 /* =============contacto================== */
-
-
 
 /* ===================================== */
 
-
-
-
-
 /* Footer */
-#footer .container{
+#footer .container {
   display: flex;
 }
 
-#footer h4{
+#footer h4 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 4px;
-
 }
 
-#footer .img-galery{
+#footer .img-galery {
   display: block;
   position: relative;
   overflow: hidden;
   background: #c14679;
 }
 
-#footer .img-galery img{
+#footer .img-galery img {
   display: block;
   width: 100%;
   height: auto;
   transform: scale(1.05);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-#footer .img-galery img:hover{
+#footer .img-galery img:hover {
   transform: scale(1);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-#footer ul, li{
+#footer ul,
+li {
   list-style: none;
   text-decoration: none;
 }
-#footer li a{
+#footer li a {
   text-decoration: none;
 }
 
-ul.icons-footer{
+ul.icons-footer {
   display: flex;
 }
 
-ul.icons-footer li{
+ul.icons-footer li {
   text-align: center;
 }
-#op-logo:after{
-content:"";
-padding:0px 56px 15px 56px;
-background-image:url('');
-background-repeat:no-repeat;
-background-size:cover;
-margin-right:9px;
+#op-logo:after {
+  content: '';
+  padding: 0px 56px 15px 56px;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 9px;
 }
-#op-footer span{
+#op-footer span {
   line-height: 45px;
 }
-
 
 #op-footer span {
   line-height: 45px;
@@ -348,25 +332,23 @@ margin-right:9px;
   margin-right: 10px;
   background: #d7d7d7;
   transition: inherit;
-
 }
 
-.paginas-footer li:hover{
-  transition: all .4s;
-  transform: translateX(15px)
+.paginas-footer li:hover {
+  transition: all 0.4s;
+  transform: translateX(15px);
 }
 
-
-#footer li{
+#footer li {
   font-size: 14px;
   color: #cb8b88;
 }
-#footer li a{
+#footer li a {
   font-size: 14px;
   color: #000000;
 }
-#footer li a:hover{
-  transition: all .4s;
+#footer li a:hover {
+  transition: all 0.4s;
   font-size: 14px;
   color: #cb8b88;
 }
@@ -379,4 +361,3 @@ margin-right:9px;
 }
 
 /* fin de footer */
-
