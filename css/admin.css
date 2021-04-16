@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-size: 15px;
+  }
+  
+/*Header*/
+#header nav {
+    background-color: white !important;
+    font-family: 'Palanquin Dark', sans-serif;
+  }
+  
+  #header img {
+    height: 80px;
+  }
+
+  /*Fin del header*/
+  
+  /*Tablas usuarios y productos*/
+  thead{
+    background-color: #c14679;
+  }
+  th{
+    color: #ffffff;
+  }
+  
+  

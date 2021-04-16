@@ -13,11 +13,45 @@ body {
   background-position-x: 20%;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: #c17397;
   background-color: #fcecef;
 }
+.error {
+  background: #e24141a1;
+  color: #680000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.btn_home {
+  padding: 7%;
+  margin-right: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  background: #c17397;
+  box-shadow: -2px 2px 5px #fff;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.btn_home:hover {
+  box-shadow: -4px 4px 5px #fff;
+  cursor: pointer;
+  background: #c14397;
+  transition: 0.5s;
+}
+
 .login-div {
   width: 380px;
   height: 600px;
@@ -47,6 +81,14 @@ body {
   font-weight: 400;
   font-family: 'euphoria script', cursive;
 }
+#title_r {
+  font-size: 30px;
+  padding-top: 5px;
+}
+#sub_r {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
 .subtitle {
   text-align: center;
   font-size: 30px;
@@ -57,6 +99,10 @@ body {
 .form {
   width: 100%;
   padding-top: 2%;
+}
+#form_r input {
+  font-size: 15px;
+  padding: 1.2%;
 }
 .form input {
   border: none;
