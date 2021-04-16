@@ -8,110 +8,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
 }
-.categories_title {
-  text-align: center;
-  padding-top: 10px;
-  margin-top: 20px;
-  color: #c14679;
-  font-size: 2.2rem;
-}
-/* Footer */
-#footer .container {
-  display: flex;
-}
-
-#footer h4 {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 4px;
-}
-
-#footer .img-galery {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  background: #c14679;
-}
-
-#footer .img-galery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transform: scale(1.05);
-  transition: all 0.3s;
-}
-
-#footer .img-galery img:hover {
-  transform: scale(1);
-  transition: all 0.3s;
-}
-
-#footer ul,
-li {
-  list-style: none;
-  text-decoration: none;
-}
-#footer li a {
-  text-decoration: none;
-}
-
-ul.icons-footer {
-  display: flex;
-}
-
-ul.icons-footer li {
-  text-align: center;
-}
-#op-logo:after {
-  content: '';
-  padding: 0px 56px 15px 56px;
-  background-image: url('');
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-right: 9px;
-}
-#op-footer span {
-  line-height: 45px;
-}
-
-.paginas-footer li::before {
-  display: inline-block;
-  vertical-align: middle;
-  content: '';
-  height: 1px;
-  width: 12px;
-  margin-right: 10px;
-  background: #d7d7d7;
-  transition: inherit;
-}
-
-.paginas-footer li:hover {
-  transition: all 0.4s;
-  transform: translateX(15px);
-}
-
-#footer li {
-  font-size: 14px;
-  color: #cb8b88;
-}
-#footer li a {
-  font-size: 14px;
-  color: #000000;
-}
-#footer li a:hover {
-  transition: all 0.4s;
-  font-size: 14px;
-  color: #cb8b88;
-}
-
-@media (max-width: 578px) {
-  #footer .grid-galery {
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-}
-
-/* fin de footer */
 
 /*Header*/
 #header nav {
@@ -120,7 +16,12 @@ ul.icons-footer li {
 }
 
 #header img {
-  height: 8rem;
+  height: 80px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
 }
 
 .nav-item i,
@@ -129,15 +30,11 @@ ul.icons-footer li {
 }
 
 .nav-item span {
-  font-size: 120%;
+  font-size: 15px;
 }
-.navbar-nav {
-  display: flex;
-  align-items: center;
-}
+
 .nav-item i {
-  font-size: 150%;
-  margin-top: 12%;
+  font-size: 18px;
 }
 /*Fin del header*/
 
@@ -157,6 +54,10 @@ ul.icons-footer li {
   z-index: 1;
 }
 
+#carousel .overlay h1 {
+  font-size: 30px;
+}
+
 #carousel .overlay .container,
 #carousel .overlay .row {
   height: 100%;
@@ -164,11 +65,31 @@ ul.icons-footer li {
 
 #carousel .overlay button,
 #carousel .overlay a {
-  font-size: 1.5rem;
+  font-size: 15px;
   text-decoration: none;
   color: white;
   background-color: #c14679;
 }
+
+@media (min-height: 360px) {
+  #carousel img {
+    min-height: 220px;
+    object-fit: cover;
+  }
+}
+
+/*Categorias*/
+.categories_title {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 20px;
+  color: #c14679;
+  font-size: 35px;
+}
+
 .cards-container {
   display: flex;
   justify-content: center;
@@ -212,7 +133,34 @@ ul.icons-footer li {
   width: 100%;
   height: 100%;
 }
-
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.btn_goup {
+  margin-left: 15px;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  border-radius: 30px;
+  background: #c17397;
+  z-index: 20;
+  opacity: 0.8;
+}
+.go_up {
+  width: 50px;
+  height: 50px;
+  background: none;
+  color: #fff;
+  border: none;
+}
+.go_up i {
+  font-size: 30px;
+  background: none;
+  color: #fff;
+}
 .flip-card-back {
   display: flex;
   justify-content: center;
@@ -224,6 +172,34 @@ ul.icons-footer li {
 .flip-card-back h1 {
   font-family: 'euphoria script', cursive;
 }
+
+/*Testimonios*/
+#testimonios h3 {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  font-size: 35px;
+  color: #c14679;
+}
+
+.img-cliente {
+  border-radius: 50px;
+  max-width: 40px;
+}
+
+.card-cliente {
+  box-shadow: 0 0 18px 0 rgb(0 0 0 / 13%);
+}
+
+.card-cliente small {
+  color: #c14679;
+}
+
+.card-cliente h6 {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  color: black;
+}
+
 /* Footer */
 #footer .container {
   display: flex;
@@ -245,7 +221,7 @@ ul.icons-footer li {
 #footer .img-galery img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   transform: scale(1.05);
   transition: all 0.3s;
 }

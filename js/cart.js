@@ -1,3 +1,20 @@
+//boton desplazar suave hacia arriba
+window.onscroll = function () {
+  let boton = document.querySelector('.btn_goup');
+  if (document.documentElement.scrollTop < 200) {
+    boton.classList.add('hide');
+  } else {
+    boton.classList.remove('hide');
+    boton.classList.add('show');
+  }
+  document.querySelector('.btn_goup').addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+};
+
 class Producto {
   constructor(codigo, nombre, precio, imagen, stock) {
     this.codigo = codigo;
@@ -19,7 +36,7 @@ let contenedor = document.querySelector('#contenedor');
 let contadorCarrito = document.querySelector('#countCarrito');
 
 let cuerpoModal = document.querySelector('.modal-body');
-/*
+
 let prod1 = new Producto(
   1,
   'Brownie con dulce de leche',
@@ -61,14 +78,11 @@ let prod6 = new Producto(
   70,
   'https://cdn.cienradios.com/wp-content/uploads/sites/3/2020/03/crumble-de-manzana.jpg',
   10
-  );
+);
 
-*/
+// productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
 
-//productos.push(prod1, prod2, prod3, prod4, prod5, prod6);
-console.log(productos);
-
-//localStorage.setItem('productos', JSON.stringify(productos));
+// localStorage.setItem('productos', JSON.stringify(productos));
 
 window.addEventListener('load', cargarCards);
 
@@ -81,12 +95,11 @@ function contarCarrito() {
   contadorCarrito.innerHTML = sumaCantidad;
 }
 
-
 function cargarCards() {
-  contenedor.innerHTML="";
+  contenedor.innerHTML = '';
   for (let i = 0; i < productos.length; i++) {
     let div = document.createElement('div');
-    div.classList = 'col col-md-4 mt-4';
+    div.classList = 'col-md-6 col-lg-4 mt-4';
     div.innerHTML = `
             <div class="card">
               <img src="${productos[i].imagen}" class="card-img-top imgCard" alt="${productos[i].nombre}" />
@@ -99,7 +112,7 @@ function cargarCards() {
               <div class="card-footer">
                 <p>$${productos[i].precio}</p>
               </div>
-              <a href="#" class="btn btn-success" onclick="agregarCarrito(${productos[i].codigo})">Carrito</a>
+              <a href="#" class="btn btn-secondary" onclick="agregarCarrito(${productos[i].codigo})">Carrito</a>
             </div>`;
     contenedor.appendChild(div);
   }
@@ -135,30 +148,33 @@ function agregarCarrito(codigo) {
     cargarCards();
     contarCarrito();
   } else {
-    alert('No hay stock disponible');
+    Swal.fire({
+      icon: 'error',
+      title: 'ups!',
+      text: 'No hay stock disponible',
+    });
   }
 }
-
 
 //cargarModal()
 //--------------------------------------------------------------
 
 function cargarModal() {
-  cuerpoModal.innerHTML = "";
+  cuerpoModal.innerHTML = '';
 
-  let suma = document.querySelector("#totalCarrito");
+  let suma = document.querySelector('#totalCarrito');
   sumaCarrito = 0;
 
   if (carrito.length === 0) {
-    cuerpoModal.innerHTML = "<h3>No hay productos en el carrito</h3>";
+    cuerpoModal.innerHTML = '<h3>No hay productos en el carrito</h3>';
     sumaCarrito = 0;
     suma.innerHTML = `<b>${sumaCarrito}</b>`;
     return;
   }
 
   carrito.forEach(function (prod) {
-    let div = document.createElement("div");
-    div.classList = "card mb-2";
+    let div = document.createElement('div');
+    div.classList = 'card mb-2';
     let detalle = `
     <div class="row no-gutters">
     <div class="col-md-4">
@@ -186,30 +202,29 @@ function cargarModal() {
 
 function verCarrito() {
   cargarModal();
-  $("#modalCarrito").modal("show");
+  $('#modalCarrito').modal('show');
 }
-
 
 function delElementCarrito(id) {
-  let index=carrito.findIndex(function(prod){
-    return prod.id===id
-  })
-  let cantidad=carrito[index].cantidad
-  carrito.splice(index,1)
-  localStorage.setItem("carrito", JSON.stringify(carrito))
+  let index = carrito.findIndex(function (prod) {
+    return prod.id === id;
+  });
+  let cantidad = carrito[index].cantidad;
+  carrito.splice(index, 1);
+  localStorage.setItem('carrito', JSON.stringify(carrito));
 
   //manejar el tema del stock
-  let indexProd=productos.findIndex(function(prod){
-    return prod.codigo===id
-  })
-  productos[indexProd].stock+=cantidad
-  localStorage.setItem("prductos", JSON.stringify(productos))
-  cargarCards()
-  cargarModal()
-  contarCarrito()
+  let indexProd = productos.findIndex(function (prod) {
+    return prod.codigo === id;
+  });
+  productos[indexProd].stock += cantidad;
+  localStorage.setItem('prductos', JSON.stringify(productos));
+  cargarCards();
+  cargarModal();
+  contarCarrito();
 }
 
-
-cargarCard();
+cargarCards();
 contarCarrito();
 
+//funcionando carrito y modal ahora pull request
