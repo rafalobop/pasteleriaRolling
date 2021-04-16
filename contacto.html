@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="/css/home.css" /> -->
+    <link rel="stylesheet" href="/css/contacto.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Palanquin+Dark:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./img/logohome.png">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css">
+
+    <title>TucuCake | La mejor repostería del Norte Argentino</title>
+  </head>
+  <body>
+    <header id="header" class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="home.html"
+            ><img src="./img/logohome.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto text-uppercase">
+              <li class="nav-item active">
+                <a class="nav-link" href="home.html"
+                  >Inicio <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="login.html">Productos</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <span class="sesion ml-3 text-capitalize"></span>
+              <a id="iniciarSesion" href="login.html" class="btn btn-secondary ingresar ml-1">Iniciar Sesi&oacute;n</a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+        <!-- slide principal -->
+      <section id="main">
+        <div
+          id="carousel"
+          class="carousel slide carousel-fade"
+          data-ride="carousel"
+          data-pause="false"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./img/imagen-1.jpg"
+                class="d-block w-100"
+                alt="imagen 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/imagen-2.png"
+                class="d-block w-100"
+                alt="imagen 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/imagen-3.png"
+                class="d-block w-100"
+                alt="imagen 3"
+              />
+            </div>
+            <div class="overlay">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div
+                    class="col-md-6 offset-md-6 text-center text-md-right text-uppercase"
+                  >
+                    <h1>Los mejores productos</h1>
+                    <p class="d-none d-md-block">
+                      Los encontras en un solo lugar
+                    </p>
+                    <button type="button" class="btn text-uppercase">
+                      <a href="cart.html">Comprar ahora</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="info">
+          <div class="container mt-5 mb-5">
+              <div class="row">
+                  <div class="col-4 datos-contacto">
+                    <p><a href=""><i class="fas fa-phone-alt fa-5x"></i></a></p>
+                    <h3 style="font-weight: bold;">Telefono</h3>
+                    <p>+54-3815777767</p>
+                  </div>
+                  <div class="col-4 datos-contacto">
+                    <p><a href=""><i class="fas fa-map-marker-alt fa-5x"></i></a></p>
+                    <h3 style="font-weight: bold;">Direccion</h3>
+                    <p>Av. Perón 1700 – Yerba Buena Design</p>
+                  </div>
+                  <div class="col-4 datos-contacto">
+                    <p><a href=""><i class="fas fa-envelope-open-text fa-5x"></i></a></p>
+                    <h3 style="font-weight: bold;">E-mail</h3>
+                    <p>info@pastelesrolling.com.ar</p>
+                  </div>
+              </div>
+          </div>
+          <div class="container mt-5 mb-3">
+              <div class="row" id="titles">
+                  <div class="col titles">
+                      <h3 style="font-weight: bold;">Contactate con nosotros</h3>
+                      <h6>¡Dejanos tu consultas!</h6>
+                      <p>y nosotros nos pondremos en contacto contigo.</p>
+                  </div>
+              </div>
+          </div>
+          <!-- formulario -->
+          <div class="container mt-5 mb-5 pr-5 pl-5" id="form">
+              <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                    <form action="" class="form-rolling">
+                            <label for="nombre">
+                               <span> ¿Cuál es tu nombre?</span>
+                            <input class="input" type="text" id="nombre" name="nombre" required>
+                            </label>
+                            <label for="email">
+                            <span>¿Cuál es tu correo?</span>
+                                <input class="input" type="email" id="email" name="email">
+                            </label>
+                      
+                            <span>Tu mensaje</span>
+                            <textarea name="termino" id="termino" cols="50" rows="10" readonly >
+
+                            </textarea>
+                        
+                        
+                            <label for="acepto">
+                                <input class="check" type="checkbox" id="acepto" name="acepto" required>
+                            Acepto los términos y condiciones
+                            </label>
+                    
+                        <!-- <input type="submit"> -->
+                        <button class="submit_contact">Enviar</button>
+                    </form>
+                  </div>
+                  <div class="col-lg-6 col-md-12"">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14240.971505422169!2d-65.2026019!3d-26.8322263!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c100c996b4d%3A0xc389847f9865c5fa!2sConfiter%C3%ADa%20Royal!5e0!3m2!1ses!2sar!4v1618601005849!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="btn_goup hide">
+        <button class="go_up"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></i></button>
+      </div>
+
+
+
+ 
+</main>
+
+    <footer class="mt-5">
+      <div id="footer" class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <h4 class="footer-title mb-4">GALERIA</h4>
+            <div class="row grid-galery mr-5">
+              <div class="col img-galery p-0 mr-1 mb-2">
+                <a href=""
+                  ><img
+                    src="https://placeralplato.com/files/2015/06/lemon-pie-640x480.jpg?width=1200&enable=upscale"
+                    alt=""
+                /></a>
+              </div>
+              <div class="col img-galery p-0 mr-1 mb-2">
+                <a href=""
+                  ><img
+                    src="https://i0.wp.com/commememucho.com/wp-content/uploads/2018/06/brownie-trozos1-e1584371731926.jpg"
+                    alt=""
+                /></a>
+              </div>
+              <div class="col img-galery p-0 mr-1 mb-2">
+                <a href=""
+                  ><img
+                    src="https://cdn.kiwilimon.com/recetaimagen/36681/th5-640x426-46622.jpg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="row grid-galery mr-5">
+              <div class="col img-galery p-0 mr-1 mb-2">
+                <a href=""
+                  ><img
+                    src="https://3.bp.blogspot.com/-oHhqQhChx0I/WTLblgYYXnI/AAAAAAAAF0A/nqHB0HxEE-4TG-icgWDH2L05yYXoHt_EQCLcB/s1600/cupcakes-vainilla-decorados-merengue.jpg"
+                    alt=""
+                /></a>
+              </div>
+              <div class="col img-galery p-0 mr-1 mb-2">
+                <a href=""
+                  ><img
+                    src="https://www.recetasderechupete.com/wp-content/uploads/2019/11/Tarta-de-Oreo.jpg"
+                    alt=""
+                /></a>
+              </div>
+              <div class="col img-galery p-0 mr-1 mb-2">
+                <a href=""
+                  ><img
+                    src="https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2014/11/tartas-de-chocolate-960x540.jpg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h4 class="footer-title mb-4">PAGINAS</h4>
+            <div class="row paginas-footer">
+              <div class="col">
+                <ul>
+                  <li class="mb-2">
+                    <a href="" class="links-footer">Inicio</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="links-footer">Tienda</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="links-footer">Promociones</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="links-footer">Oportunidades</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li class="mb-2">
+                    <a href="" class="links-footer">Nosotros</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="links-footer">Nuestro blog</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="links-footer">FAQ</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="links-footer">Contactacnos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col pd-1">
+            <h4 class="footer-title mb-4">CONTACTANOS</h4>
+            <ul class="contacto-creativo">
+              <li>
+                <div class="row datos-contacto mb-3">
+                  <div class="col-1 contacto">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                  </div>
+                  <div class="col text ml-2">
+                    <a href="#"
+                      >523 Sylvan Ave, 5th Floor <br />
+                      Mountain View, CA 94041 USA</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row datos-contacto mb-3">
+                  <div class="col-1 contacto">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="col text ml-2">
+                    <a href="#">+54 381-5777468</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row datos-contacto mb-3">
+                  <div class="col-1 contacto">
+                    <i class="far fa-envelope"></i>
+                  </div>
+                  <div class="col text ml-2">
+                    <a href="#">info@pastelesrolling.com.ar</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="icons-footer justify-content-evenly pr-5 mt-4">
+              <li class="mr-3">
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+              </li>
+              <li class="mr-3">
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+              </li>
+              <li class="mr-3">
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fab fa-twitter-square fa-2x"></i>
+                </a>
+              </li>
+              <li class="mr-3">
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fab fa-google-plus-square fa-2x"></i>
+                </a>
+              </li>
+              <li class="mr-3">
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="row derechos">
+          <div class="col">
+            <div id="op-footer">
+              <a href="#" target="_blank"><span id="op-logo"></span></a
+              ><span
+                >© Copyright 2021 | Todos los derechos reservados |
+                <a href="#" target="_blank"
+                  ><span>Política de privacidad</span> </a
+                >|<a href="#" target="_blank"
+                  ><span> Política de Cookies </span> </a
+                >|<a href="#" target="_blank"><span> Sitemap </span> </a>|</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalCarrito"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Carrito de productos
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <span>Total: </span><span id="totalCarrito"> </span>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------------------------------- -->
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://use.fontawesome.com/823835b326.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/contacto.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </body>
+</html>
