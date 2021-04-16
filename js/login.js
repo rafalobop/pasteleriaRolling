@@ -136,14 +136,14 @@ function validarRegistro() {
 //formulario login
 
 let admin = new Usuario(9999, 'admin', 'admin', 'admin', 'admin@tucucake.com');
-// let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+//let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 // llamamos a los usuarios de localstorage
 //creamos un objeto vacio
 let usuario = {};
 let btn_log = document.querySelector('#btn_log');
 usuarios.push(admin);
 //logica del login
-localStorage.setItem('usuarios', JSON.stringify(usuarios));
+//localStorage.setItem('usuarios', JSON.stringify(usuarios));
 function validar() {
   let inputUser = document.querySelector('#user');
   let inputPassword = document.querySelector('#pass');
